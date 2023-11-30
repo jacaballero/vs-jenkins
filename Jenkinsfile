@@ -24,7 +24,7 @@ pipeline {
         stage('Create Slides') {
             steps {
                 // Crear el directorio 'slides' si no existe
-                sh 'mkdir -p slides'
+                sh 'mkdir -p slides/html'
                 // Ejecutar el script html-build.sh dentro de 'marp'
                 sh './marp/html-build.sh cultura.md'
             }
