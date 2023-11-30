@@ -1,11 +1,11 @@
 pipeline {
-    agent { dockerfile true }
-    /*agent {
+    //agent { dockerfile true }
+    agent {
         docker {
             image 'node:20.10.0-alpine3.18'
             //args '-v /home/workspace/uca-virtualizacion/devops:/home/node/devops'
         }
-    }*/
+    }
 
     /*environment {
         DEVOPS_PATH = '/home/workspace/uca-virtualizacion/devops'
@@ -20,6 +20,7 @@ pipeline {
                     sh 'npm install --save @marp-team/marp-core'
                     // Añadir una pausa de 10 segundos para asegurar la instalación
                     //sleep(time: 5, unit: 'SECONDS')
+                    sh 'npx @puppeteer/browsers install chrome@stable'
                     sh 'npm list'
                 }
             }
