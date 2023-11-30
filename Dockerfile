@@ -11,6 +11,6 @@ RUN npm -v
 RUN npm i -g nodemon
 RUN nodemon -v
 
-RUN apt-get install -y libappindicator1 fonts-liberation wget software-properties-common
+RUN apt-get install -y libappindicator1 fonts-liberation wget software-properties-common libasound2 libatk-bridge2.0-0 libatspi2.0-0 libdrm2 libgbm1 libgtk-4-1 libnspr4 libnss3 libu2f-udev libvulkan1 libxkbcommon0 xdg-utils
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome*.deb
