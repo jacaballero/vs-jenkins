@@ -19,10 +19,10 @@ pipeline {
                     // Ejecutar npm install dentro del directorio 'marp'
                     sh 'npm install --save @marp-team/marp-core'
                 }
-            }
-        }
-        stage('Create Slides') {
-            steps {
+            //}
+        //}
+        //stage('Create Slides') {
+            //steps {
                 // Crear el directorio 'slides' si no existe
                 sh 'mkdir -p slides/html'
                 // Ejecutar el script html-build.sh dentro de 'marp'
