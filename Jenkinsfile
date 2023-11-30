@@ -30,7 +30,7 @@ pipeline {
                 // Crear el directorio 'slides' si no existe
                 sh 'mkdir -p pdf'
                 // Ejecutar el script html-build.sh dentro de 'marp'
-                sh './marp/pdf-build.sh cultura.md'
+                sudo sh './marp/pdf-build.sh cultura.md'
             }
         }
     }
