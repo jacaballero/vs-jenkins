@@ -17,12 +17,11 @@ pipeline {
             steps {
                 dir("marp") {
                     // Ejecutar npm install dentro del directorio 'marp'
-                    sh 'npm install --save @marp-team/marp-core'
+                    //sh 'npm install -g --save @marp-team/marp-core'
+                    sh 'npm install -g @marp-team/marp-cli'
                     // Añadir una pausa de 10 segundos para asegurar la instalación
-                    sleep(time: 5, unit: 'SECONDS')
+                    //sleep(time: 5, unit: 'SECONDS')
                     sh 'npm list'
-                    sh 'marp-cli --version'
-                    sh 'find / -name marp -type f 2>/dev/null'
                 }
             }
         }
