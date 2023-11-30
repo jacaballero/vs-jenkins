@@ -1,8 +1,6 @@
 #FROM node:20.10.0-alpine3.18
 FROM ubuntu:latest
 USER root
-WORKDIR /home/app
-COPY ./package.json /home/app/package.json
 RUN apt-get update
 RUN apt-get -y install curl gnupg
 RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
