@@ -17,7 +17,8 @@ pipeline {
             steps {
                 dir("marp") {
                     // Ejecutar npm install dentro del directorio 'marp'
-                    sh 'npm install --save @marp-team/marp-core'
+                    //sh 'npm install --save @marp-team/marp-core'
+                    sh 'npm install'
                     sh 'npm list marp'
                 }
             }
