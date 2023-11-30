@@ -17,8 +17,7 @@ pipeline {
             steps {
                 dir("marp") {
                     // Ejecutar npm install dentro del directorio 'marp'
-                    //sh 'npm install -g --save @marp-team/marp-core'
-                    sh 'sudo npm install -g @marp-team/marp-cli'
+                    sh 'npm install --save @marp-team/marp-core'
                     // Añadir una pausa de 10 segundos para asegurar la instalación
                     //sleep(time: 5, unit: 'SECONDS')
                     sh 'npm list'
@@ -28,9 +27,9 @@ pipeline {
         stage('Create Slides') {
             steps {
                 // Crear el directorio 'slides' si no existe
-                sh 'mkdir -p slides/html'
+                sh 'mkdir -p pdf'
                 // Ejecutar el script html-build.sh dentro de 'marp'
-                sh './marp/html-build.sh cultura.md'
+                sh './marp/pdf-build.sh cultura.md'
             }
         }
     }
