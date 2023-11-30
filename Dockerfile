@@ -15,4 +15,5 @@ RUN apt-get install -y libappindicator1 fonts-liberation wget software-propertie
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg -i google-chrome*.deb
 
+RUN mkdir /.npm
 RUN chown -R 1000:1000 "/.npm"
