@@ -21,6 +21,7 @@ pipeline {
                     // Añadir una pausa de 10 segundos para asegurar la instalación
                     sleep(time: 5, unit: 'SECONDS')
                     sh 'npm list'
+                    sh 'marp-cli --version'
                     sh 'find / -name marp -type f 2>/dev/null'
                 }
             }
