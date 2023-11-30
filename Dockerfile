@@ -17,3 +17,6 @@ RUN dpkg -i google-chrome*.deb
 
 RUN mkdir /.npm
 RUN chown -R 1000:1000 "/.npm"
+RUN mkdir /tmp-marp
+RUN chown -R 1000:1000 "/tmp-marp"
+RUN export TMPDIR=/tmp-marp
