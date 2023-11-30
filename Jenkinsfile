@@ -20,6 +20,7 @@ pipeline {
                     sh 'npm install --save @marp-team/marp-core'
                     // Añadir una pausa de 10 segundos para asegurar la instalación
                     sleep(time: 10, unit: 'SECONDS')
+                    sh 'ls node_modules | grep marp'
                     sh 'npm list marp'
                 }
             }
