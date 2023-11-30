@@ -11,11 +11,10 @@ RUN npm -v
 RUN npm i -g nodemon
 RUN nodemon -v
 
-RUN apt-get install -y libappindicator1 fonts-liberation wget
+RUN apt-get install -y libappindicator1 fonts-liberation wget software-properties-common
 #RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #RUN dpkg -i google-chrome*.deb
 
-RUN apt-get install software-properties-common
 RUN add-apt-repository ppa:canonical-chromium-builds/stage
 RUN apt-get update
 RUN apt-get install chromium-browser 
