@@ -1,11 +1,11 @@
 pipeline {
-    
-    agent {
+    agent { dockerfile true }
+    /*agent {
         docker {
             image 'node:20.10.0-alpine3.18'
             //args '-v /home/workspace/uca-virtualizacion/devops:/home/node/devops'
         }
-    }
+    }*/
 
     /*environment {
         DEVOPS_PATH = '/home/workspace/uca-virtualizacion/devops'
