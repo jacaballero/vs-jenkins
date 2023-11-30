@@ -1,0 +1,3 @@
+- [Cultura DevOps](cultura_text.md)
+- [CI/CD](cicd_text.md)
+- [Git Branching patterns](branching_text.md)

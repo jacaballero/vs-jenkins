@@ -1,0 +1,21 @@
+/*
+@theme ucaslides
+*/
+
+@import default;
+
+h1 {
+  text-align: center;
+  color: #005877;
+}
+h2 {
+  color: #E87B00;
+}
+h3 {
+  color: #005877;
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
